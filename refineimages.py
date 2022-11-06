@@ -12,6 +12,9 @@ for path in os.listdir(dir_path):
     if os.path.isfile(os.path.join(dir_path, path)):
         res.append(path)
 
+# print result
+print(res)
+
 for i in res:
     im = Image.open('images/'+i)
     cropped = im.crop((60,208,1020,1778))

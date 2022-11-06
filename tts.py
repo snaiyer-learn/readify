@@ -9,6 +9,8 @@
 import pyttsx3
 engine = pyttsx3.init()
 string = "Humpty dumpty sat on a wall"
-engine.save_to_file(string, 'speech.mp3')
+newVoiceRate = 100
+engine.setProperty('rate',newVoiceRate)
+engine.save_to_file(string, 'audio/speech.mp3')
 engine.runAndWait()
-# save this file as tts.mp3
+
